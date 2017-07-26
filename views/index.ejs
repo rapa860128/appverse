@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+<title>VERSE | Software</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2>Datos de Empresas</h2>
+<a href="/new" class="btn btn-default">Nueva Empresa</a>
+<br><br>
+<% if(datos.length>0){
+for(var i=0; i<datos.length; i++) { %>
+<table class="table table-bordered" border="1">
+<thead>
+	<th>RFC</th>
+	<th>Contacto</th>
+	<th>Nombre de Empresa</th>
+  <th>Teléfono</th>
+  <th>Correo</th>
+  <th>Fecha de Registro</th>
+</thead>
+    <tr class="table">
+      <td><%= datos[i].RFC %></td>
+      <td><%= datos[i].PricipalName %></td>
+      <td><%= datos[i].BusinessName %></td>
+      <td><%= datos[i].Phone %></td>
+      <td><%= datos[i].Email %></td>
+      <td><%= datos[i].CreatedDate %></td>
+      <td>
+      	<a href="/edit/<%= datos[i].Id_Registro %>" class="btn-xs btn btn-warning">Editar</a>
+      	<a href="/delete/<%= datos[i].Id_Registro %>" class="btn-xs btn btn-danger">Eliminar</a>
+      </td>
+    </tr>
+</table>
+<% }
+} else { %>
+<p class="alert alert-warning">No hay contactos de empresas</p>
+<% } %>
+</div>
+</div>
+</div>
+</body>
+</html>

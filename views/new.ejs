@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+  <title>VERSE | Software</title>
+</head>
+<body>
+ 
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2>Nuevo Contacto</h2>
+<a href="/" class="btn btn-default">Inicio</a>
+<br><br>
+<form method="post" action="/save">
+  <div class="form-group">
+    <label for="exampleInputEmail1">RFC</label>
+    <input type="text" name="t_datos[RFC]" class="form-control" id="exampleInputEmail1" placeholder="RFC">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nombre de Contacto</label>
+    <input type="text" name="t_datos[PricipalName]" class="form-control" id="exampleInputEmail1" placeholder="Nombre de Contacto">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Empresa</label>
+    <input type="text" name="t_datos[BusinessName]" class="form-control" id="exampleInputEmail1" placeholder="Nombre de Empresa">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Teléfono</label>
+    <input type="text" name="t_datos[Phone]" class="form-control" id="exampleInputEmail1" placeholder="Teléfono">
+  </div>
+
+    <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input type="text" name="t_datos[Email]" class="form-control" id="exampleInputEmail1" placeholder="Correo Electrónico">
+  </div>
+
+<button type="submit" class="btn btn-default">Guardar</button>
+</form>
+</div>
+</div>
+</div>
+
+</body>
+</html>
