@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs')
 
 con = mysql.createConnection({
-	host:"localhost",
+	host:"192.168.0.46",
 	user:"root",
 	password:"12345678",
 	database:"empresas"
